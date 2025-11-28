@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Store For My Mommy</title>
+<style>
+/* --- General Body/Background --- */
+body {
+    /* Light, snowy background */
+    background-color: #F0FFF0; 
+    /* Use the background image from the provided URL */
+    background-image: url('https://raw.githubusercontent.com/Rustycloudz/images/main/Gemini_Generated_Image_yjmwtlyjmwtlyjmw.png');
+    
+    /* MODIFIED: Ensure the image does not tile */
+    background-repeat: no-repeat; 
+    /* MODIFIED: Scale the image to cover the entire page */
+    background-size: cover; 
+    /* Optional: Keep the background static when the user scrolls */
+    background-attachment: fixed;
+    
+    /* A more festive, script-like font */
+    font-family: 'Georgia', serif; 
+    color: #006747; /* Default text colour is forest green */
+    margin: 20px;
+    padding: 20px;
+    /* IMPORTANT: Need this for the snowflakes to cover the whole screen */
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrollbar from drifting snowflakes */
+}
+
+/* --- Product Titles (h1) --- */
+h1 {
+    /* Deep red background for the title block */
+    background-color: #C8102E; 
+    /* Gold/Yellow text */
+    color: #FFD700; 
+    /* Padding to make the background visible */
+    padding: 10px 15px; 
+    /* Rounded corners for a softer, more gift-like look */
+    border-radius: 8px; 
+    /* Optional: Add a subtle shadow */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    /* Slightly larger font for emphasis */
+    font-size: 1.8em; 
+    /* Margin below title */
+    margin-bottom: 5px; 
+}
+
+/* --- Product Links (a) --- */
+p a {
+    /* Dark green text for the link */
+    color: #006747; 
+    /* Remove default underline to look cleaner */
+    text-decoration: none; 
+    /* Make the link bold */
+    font-weight: bold; 
+    /* Optional: Small background highlight */
+    padding: 2px 5px; 
+    background-color: #E0EEE0; 
+    border-radius: 3px;
+}
+
+/* --- Link Hover Effect (Adds sparkle/tinsel effect) --- */
+p a:hover {
+    /* Change to gold on hover */
+    color: #FFD700; 
+    /* Change background to red on hover */
+    background-color: #C8102E; 
+    text-decoration: underline;
+}
+
+/* --- SNOWFLAKE CSS STYLES AND ANIMATIONS --- */
+
+/* Style for the snowflakes */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Start above the viewport */
+    background-color: white;
+    border-radius: 50%; /* Makes it a circle */
+    opacity: 0.8;
+    pointer-events: none; /* Allows clicks to go through to content below */
+    z-index: 1000; /* Ensure snowflakes are on top of content */
+    filter: blur(0.5px); /* Soften the edges */
+}
+
+/* Animation for the falling motion */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Animation for the sideways drift/wind effect */
+@keyframes drift {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
+</style>
+</head>
+<body>
+<h1>Barenstain Bears: Values and Virtues Treasury</h1>
+<p>
+<a href="https://amzn.to/43UyCdJ">Click here to go to "Values and Virtues" on Amazon!</a>
+</p>
+<h1>Barenstain Bears: Faith, Hope, and Love Treasury</h1>
+<p>
+<a href="https://www.amazon.ca/dp/0310178479/ref=cm_sw_r_as_gl_apa_gl_i_ZJ7QBV82DS4Z18A1FWS1?linkCode=ml1&tag=joelatam-20&linkId=6d3ee1e2619ed711bfbd8b29fb486483">Click here to go to "Faith, Hope, and Love" on Amazon!</a>
+</p>
+<h1>Montessori Colour Sorting</h1>
+<p>
+<a href="https://amzn.to/3MeP6Hr">Click here to go to the Colour Sorter on Amazon!</a>
+</p>
+<h1>Little Kids First Big Book of Science from National Geographic</h1>
+<p>
+<a href="https://amzn.to/4rvHZe6">Click here to go to the Big Book of Science on Amazon!</a>
+</p>
+<h1>How to Survive a Freakin' Bear Attack! (and 127 other survival tips)</h1>
+<p>
+<a href="https://amzn.to/4pAOTN4">Click here to go to "How to Surive a Freakin' Bear Attack..." on Amazon</a>
+</p>
+<h1>Gund Sustainable Baby Doll</h1>
+<p>
+<a href="https://amzn.to/3KkMuqQ">Click here to go to the baby doll on Amazon!</a>
+</p>
+<h1>The Little Red Rescue Box</h1>
+<p>
+<a href="https://amzn.to/4p2VWhH">Click here to go to the Little Red Rescue Box on Amazon!</a>
+</p>
+<h1>Cat Lamp Kit</h1>
+<p>
+<a href="https://amzn.to/3LXUWgq">Click here to go to the Cat Lamp kit on Amazon!</a>
+</p>
+<h1>Hair Chalk</h1>
+<p>
+<a href="https://amzn.to/4roVR9R">Click here to go to the hair chalk on Amazon!</a>
+</p>
+<h1> "I'm Fine, The Rest of You Need Therapy"</h1>
+<p>
+<a href="https://amzn.to/4oZO6Wa">Click here to go to The Colouring Book on Amazon!</a>
+</p>
+<h1>OMG! I'm an Adult Now!</h1>
+<p>
+<a href="https://amzn.to/3XTlFgy">Click here to go to the mug on Amazon!</a>
+</p>
+
+<script>
+    const body = document.body;
+    const numberOfSnowflakes = 50; // Total number of snowflakes to generate
+    
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+
+        // Randomize size between 2px and 6px
+        const size = Math.random() * 4 + 2; 
+        snowflake.style.width = `${size}px`;
+        snowflake.style.height = `${size}px`;
+
+        // Randomize starting X position across the viewport width
+        snowflake.style.left = `${Math.random() * 100}vw`;
+
+        // Randomize fall duration (speed) between 5s and 20s
+        const fallDuration = Math.random() * 15 + 5;
+        snowflake.style.animation = `fall ${fallDuration}s linear infinite, drift ${Math.random() * 10 + 5}s linear alternate infinite`;
+        
+        // Randomize delay so they don't all start at once
+        snowflake.style.animationDelay = `-${Math.random() * 15}s`;
+
+        body.appendChild(snowflake);
+
+        // Optional: Remove the snowflake after it finishes falling to keep the DOM clean
+        snowflake.addEventListener('animationiteration', () => {
+            // Reset the snowflake's position to the top with new random properties
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            const newFallDuration = Math.random() * 15 + 5;
+            snowflake.style.animationDuration = `${newFallDuration}s`;
+            snowflake.style.animationDelay = '0s'; // Reset delay for immediate restart
+        });
+    }
+
+    // Generate the desired number of snowflakes
+    for (let i = 0; i < numberOfSnowflakes; i++) {
+        createSnowflake();
+    }
+</script>
+
+</body>
+</html>
